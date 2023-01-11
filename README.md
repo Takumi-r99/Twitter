@@ -1,10 +1,9 @@
 ## プロジェクト名
-### Movice
+### Twitter Clone
 
 ## 概要
-映画の情報をウォッチリストに追加して、保存することができる。
+Twitterのクローンでタイムラインを作成
 
-apple store: https://apps.apple.com/app/movice/id6443401413
 
 ## 環境構築
 1. リポジトリをclone 
