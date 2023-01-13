@@ -8,16 +8,25 @@
 import UIKit
 
 class TweetTableViewCell: UITableViewCell {
+    static let reuseIdentifier = "TweetTableViewCell"
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var tweetText: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+
+
+
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    static func nib() -> UINib {
+        return UINib(nibName: TweetTableViewCell.reuseIdentifier, bundle: nil)
     }
-    
+    func bind(date: String, userName: String, tweetText: String) {
+        self.date.text = date
+        self.userName.text = userName
+        self.tweetText.text = tweetText//textView
+    }
 }

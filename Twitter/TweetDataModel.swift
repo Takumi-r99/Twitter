@@ -12,6 +12,7 @@ class TweetDataModel: Object{
     // データをちゃんと識別するために　識別子とはつける名前のこと
     @objc dynamic var id: String = UUID().uuidString // 重複しない文字列を返してくれる
     //  @objc dynamicはrealmの仕様
+    @objc dynamic var name: String = ""
     @objc dynamic var text: String = ""
     @objc dynamic var recordDate: Date = Date()
 }
